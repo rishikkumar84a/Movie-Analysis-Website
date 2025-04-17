@@ -69,4 +69,4 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-Built with ❤️ by Rishi Kumar and contributors.
+Built with ❤️ by Rishi Kumar Chaurasiya and contributors.
