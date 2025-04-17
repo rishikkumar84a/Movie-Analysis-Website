@@ -2,6 +2,12 @@
 
 A responsive and modern website that provides in-depth insights and analysis for movies worldwide. The platform collects and displays data such as average ratings, reviews, and comments from multiple sources (e.g., IMDb, Rotten Tomatoes, Metacritic, Letterboxd) and generates comprehensive analyses.
 
+## Live Demo
+
+Check out the live demo at: [https://movie-insights-iota.vercel.app/](https://movie-insights-iota.vercel.app/)
+
+This project is hosted on [Vercel](https://vercel.com/).
+
 ## Features
 
 ### Core Features
@@ -107,4 +113,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [OMDB API](http://www.omdbapi.com/) for additional movie information
 - [Next.js](https://nextjs.org/) for the React framework
 - [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Framer Motion](https://www.framer.com/motion/) for animations 
+- [Framer Motion](https://www.framer.com/motion/) for animations

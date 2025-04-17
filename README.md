@@ -6,7 +6,7 @@
   <p>A modern web application for exploring, analyzing, and tracking movies using TMDB and OMDB APIs.</p>
   
   <p>
-    <a href="https://movie-analysis-website.vercel.app/">View Demo</a> · 
+    <a href="https://movie-insights-iota.vercel.app/">View Demo</a> · 
     <a href="https://github.com/rishikkumar84a/Movie-Analysis-Website/issues">Report Bug</a> · 
     <a href="https://github.com/rishikkumar84a/Movie-Analysis-Website/issues">Request Feature</a>
   </p>
@@ -85,7 +85,9 @@ npm run dev
 
 ## 🌐 Live Demo
 
-Check out the live demo at: [https://movie-analysis-website.vercel.app/](https://movie-analysis-website.vercel.app/)
+Check out the live demo at: [https://movie-insights-iota.vercel.app/](https://movie-insights-iota.vercel.app/)
+
+This project is hosted on [Vercel](https://vercel.com/).
 
 ## 📝 License
 
