@@ -20,6 +20,10 @@
 - **Responsive Design** - Optimized for mobile, tablet, and desktop
 - **Dark Mode Support** - Choose your preferred theme
 - **Real-time Data** - Powered by TMDB and OMDB APIs
+- **Movie Comparison Tool** - Compare statistics and ratings between different films
+- **AI-generated Analysis and Verdicts** - Get expert opinions on movies
+- **Aggregated Ratings** - See ratings from multiple sources
+- **Community Opinions and Reviews** - Read what others think about movies
 
 ## 🚀 Tech Stack
 
@@ -28,6 +32,7 @@
 - **APIs**: [TMDB API](https://www.themoviedb.org/documentation/api), [OMDB API](https://www.omdbapi.com/)
 - **Animation**: [Framer Motion](https://www.framer.com/motion/)
 - **Deployment**: [Vercel](https://vercel.com/)
+- **TypeScript**: Used for type checking and code quality
 
 ## 🛠️ Installation & Set Up
 
@@ -98,4 +103,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 - [TMDB](https://www.themoviedb.org/) for providing the movie database API
 - [OMDB](https://www.omdbapi.com/) for additional movie information
-- All the open source libraries that made this project possible 
+- All the open source libraries that made this project possible
+- [Vercel](https://vercel.com/) for deployment
+- [Framer Motion](https://www.framer.com/motion/) for animations

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white/70 dark:bg-dark-700/70 backdrop-blur-lg;
+  }
+  
+  .card {
+    @apply rounded-xl overflow-hidden shadow-lg dark:shadow-dark-700/20 transition-all duration-300;
+  }
+  
+  .card-neumorphic {
+    @apply rounded-xl p-5 bg-slate-100 shadow-neumorphic-light dark:bg-dark-700 dark:shadow-neumorphic-dark transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-dark-600 dark:hover:bg-dark-500 rounded-lg transition-colors;
+  }
+} 
