@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="public/favicon.svg" alt="Movie Insights Logo" width="120" />
-  <h3>Your Personal Movie Discovery and Analysis Platform</h3>
+  <h3>Movie Discovery and Analysis Platform</h3>
   <p>A modern web application for exploring, analyzing, and tracking movies using TMDB and OMDB APIs.</p>
   
   <p>
