@@ -437,7 +437,7 @@ export default function MoviePage() {
                   Strengths
                 </h3>
                 <ul className="space-y-3">
-                  {analysis?.strengths?.map((strength, index) => (
+                  {analysis?.pros?.map((strength, index) => (
                     <li key={index} className="flex">
                       <span className="text-green-500 mr-2">•</span>
                       <span>{strength}</span>
@@ -452,7 +452,7 @@ export default function MoviePage() {
                   Weaknesses
                 </h3>
                 <ul className="space-y-3">
-                  {analysis?.weaknesses?.map((weakness, index) => (
+                  {analysis?.cons?.map((weakness, index) => (
                     <li key={index} className="flex">
                       <span className="text-red-500 mr-2">•</span>
                       <span>{weakness}</span>
