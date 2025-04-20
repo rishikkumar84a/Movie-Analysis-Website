@@ -464,7 +464,7 @@ export default function MoviePage() {
             
             <div className="bg-white dark:bg-dark-700 rounded-lg shadow-sm p-6 mb-8">
               <h3 className="text-xl font-bold mb-4">Critical Analysis</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">{analysis?.criticalAnalysis}</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">{analysis?.verdict}</p>
               
               <h4 className="text-lg font-semibold mb-2">Target Audience</h4>
               <div className="flex flex-wrap gap-2 mb-4">
