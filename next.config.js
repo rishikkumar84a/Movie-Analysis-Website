@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   images: {
-    domains: ['image.tmdb.org', 'www.themoviedb.org', 'm.media-amazon.com'],
+    domains: ['image.tmdb.org'],
   },
+  // Add any other configurations you need
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
