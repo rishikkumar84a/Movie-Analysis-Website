@@ -7,7 +7,7 @@ import { FiStar, FiClock, FiCalendar, FiDollarSign, FiThumbsUp, FiThumbsDown, Fi
 import RegionSelector from '@/components/RegionSelector';
 import Header from '@/components/Header';
 import { getMovieDetails, getOmdbData, generateMovieAnalysis, type MovieDetails, type OmdbData, type MovieAnalysis } from '@/lib/api';
-import { SUPPORTED_REGIONS } from '../../lib/api'; // Fixed import path for SUPPORTED_REGIONS
+import { SUPPORTED_REGIONS } from '../../../lib/api'; // Corrected import path for SUPPORTED_REGIONS
 import { motion } from 'framer-motion';
 
 // Define DEFAULT_REGION locally if needed
