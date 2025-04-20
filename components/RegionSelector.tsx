@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FiGlobe, FiChevronDown } from 'react-icons/fi';
-import { DEFAULT_REGION } from '@/lib/api';
+import { DEFAULT_REGION } from '@/movie-analysis/lib/api';
 
 // Common regions for movie data
 const REGIONS = [
