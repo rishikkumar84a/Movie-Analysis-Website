@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Image from 'next/image';
 import { searchMovies, getMovieDetails, type Movie, type MovieDetails } from '@/lib/api';
