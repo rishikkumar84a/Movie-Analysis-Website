@@ -6,8 +6,12 @@ import Image from 'next/image';
 import { FiStar, FiClock, FiCalendar, FiDollarSign, FiThumbsUp, FiThumbsDown, FiInfo, FiUsers, FiBookmark, FiGlobe, FiMap } from 'react-icons/fi';
 import RegionSelector from '@/components/RegionSelector';
 import Header from '@/components/Header';
-import { getMovieDetails, getOmdbData, generateMovieAnalysis, DEFAULT_REGION, type MovieDetails, type OmdbData, type MovieAnalysis } from '@/lib/api';
+import { getMovieDetails, getOmdbData, generateMovieAnalysis, type MovieDetails, type OmdbData, type MovieAnalysis } from '@/lib/api';
+import { SUPPORTED_REGIONS } from '@/lib/api'; // Import SUPPORTED_REGIONS instead
 import { motion } from 'framer-motion';
+
+// Define DEFAULT_REGION locally if needed
+const DEFAULT_REGION = 'US';
 
 export default function MoviePage() {
   const pathname = usePathname();

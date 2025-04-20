@@ -557,7 +557,7 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 110,
       title: "The Square",
-      overview: "A prestigious Stockholm museum's chief art curator finds himself in times of both professional and personal crisis as he attempts to set up a controversial new exhibit.",
+      overview: "A prestigious Stockholm museum's chief art curator finds himself in times of both professional and personal Crisis as he attempts to set up a controversial new exhibit.",
       poster_path: "https://image.tmdb.org/t/p/w500/8KeYYNe8hnKjxjujV9jGNDGlyDJ.jpg",
       backdrop_path: "https://image.tmdb.org/t/p/original/zX2ynvmNh9x6xYAO81Q6Sh4XjlL.jpg",
       release_date: "2017-08-25",
