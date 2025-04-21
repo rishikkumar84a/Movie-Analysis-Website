@@ -186,6 +186,7 @@ export interface MovieAnalysis {
   recommendedAge: string;
   movieType: string;
   detectedGenres: string[];
+  targetAudience: string[];
 }
 
 // Get trending movies
@@ -370,7 +371,12 @@ export const generateMovieAnalysis = (tmdb: MovieDetails, omdb: OmdbData): Movie
     ],
     recommendedAge: "13+",
     movieType: "Feature Film",
-    detectedGenres: ["Sci-Fi", "Drama", "Adventure"]
+    detectedGenres: ["Sci-Fi", "Drama", "Adventure"],
+    targetAudience: [
+      "Sci-Fi fans",
+      "Thriller enthusiasts",
+      "Teens and adults"
+    ]
   };
 };
 
@@ -543,7 +549,7 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
       id: 109,
       title: "Roma",
       overview: "A story that chronicles a year in the life of a middle-class family in Mexico City in the early 1970s.",
-      poster_path: "https://image.tmdb.org/t/p/w500/dtBUvPANbDYJwXm3aDJQSEEyoH3.jpg",
+      poster_path: "https://image.tmdb.org/t/p/w500/dtBUvPANbDYJwZbeLpb4NhC3pxmJj.jpg",
       backdrop_path: "https://image.tmdb.org/t/p/original/hVP5A1wvkGqusVtXwHzHvXwGqJh.jpg",
       release_date: "2018-08-30",
       vote_average: 7.7,
