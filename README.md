@@ -100,6 +100,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 👨‍💻 Author
 
 - [@rishikkumar84a](https://github.com/rishikkumar84a)
+- [@Shakshi737](https://github.com/Shakshi737)
 
 ## 🙏 Acknowledgments
 
