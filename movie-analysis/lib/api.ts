@@ -187,6 +187,8 @@ export interface MovieAnalysis {
   movieType: string;
   detectedGenres: string[];
   targetAudience: string[];
+  culturalImpact: string;
+  similarMovies?: { title: string; year: string }[];
 }
 
 // Get trending movies
@@ -376,6 +378,12 @@ export const generateMovieAnalysis = (tmdb: MovieDetails, omdb: OmdbData): Movie
       "Sci-Fi fans",
       "Thriller enthusiasts",
       "Teens and adults"
+    ],
+    culturalImpact: "This film has influenced a generation of filmmakers and is widely referenced in pop culture for its innovative storytelling and visual effects.",
+    similarMovies: [
+      { title: "Interstellar", year: "2014" },
+      { title: "The Prestige", year: "2006" },
+      { title: "Memento", year: "2000" }
     ]
   };
 };
@@ -392,7 +400,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
       backdrop_path: "https://image.tmdb.org/t/p/original/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
       release_date: "2010-07-16",
       vote_average: 8.4,
-      vote_count: 31345
+      vote_count: 31345,
+      original_language: "en",
+      original_title: "Inception"
     },
     {
       id: 2,
@@ -402,7 +412,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
       backdrop_path: "https://image.tmdb.org/t/p/original/hkBaDkMWbLaf8B1lsWsKX7Ew3Xq.jpg",
       release_date: "2008-07-18",
       vote_average: 8.5,
-      vote_count: 28975
+      vote_count: 28975,
+      original_language: "en",
+      original_title: "The Dark Knight"
     },
     {
       id: 3,
@@ -412,7 +424,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
       backdrop_path: "https://image.tmdb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
       release_date: "2014-11-05",
       vote_average: 8.3,
-      vote_count: 29530
+      vote_count: 29530,
+      original_language: "en",
+      original_title: "Interstellar"
     }
   ];
   
@@ -429,7 +443,7 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
       id: 101,
       title: "RRR",
       overview: "A fictional story about two legendary revolutionaries and their journey away from home before they started fighting for their country in the 1920s.",
-      poster_path: "https://image.tmdb.org/t/p/w500/nEufeZlyAOLqO2brrs0yeF1lgXO.jpg",
+      poster_path: "https://image.tmdb.org/t/p/w500/nEufeZlyAOLqOw0VYQQesZgIoUUpX.jpg",
       backdrop_path: "https://image.tmdb.org/t/p/original/zGLHX92Gk96O1DJvLil7ObJTbaL.jpg",
       release_date: "2022-03-24",
       vote_average: 7.8,
@@ -443,9 +457,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 102,
       title: "Parasite",
-      overview: "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+      overview: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
       poster_path: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/ApiBzeaa95TNYliSbQ8pJv4Fje7.jpg",
       release_date: "2019-05-30",
       vote_average: 8.5,
       vote_count: 14567,
@@ -458,9 +472,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 103,
       title: "Your Name",
-      overview: "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places.",
+      overview: "Two teenagers share a profound, magical connection upon discovering they are swapping bodies.",
       poster_path: "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
       release_date: "2016-08-26",
       vote_average: 8.4,
       vote_count: 8765,
@@ -473,9 +487,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 104,
       title: "Amélie",
-      overview: "At a tiny Parisian café, the adorable yet painfully shy Amélie accidentally discovers a gift for helping others.",
-      poster_path: "https://image.tmdb.org/t/p/w500/f0uorE7K7ggHfr8r7pUTOmWRBHX.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/oQnXkAF5QWwmEX7xbMuHuISBXGE.jpg",
+      overview: "Amélie is an innocent and naive girl in Paris with her own sense of justice.",
+      poster_path: "https://image.tmdb.org/t/p/w500/sRGCqg6yF2vY7p8v2GQeRkQ6p0G.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/6iUNJZymJBMXXriQyFZfLAKnjO6.jpg",
       release_date: "2001-04-25",
       vote_average: 7.9,
       vote_count: 9876,
@@ -503,9 +517,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 106,
       title: "Pain and Glory",
-      overview: "A film director reflects on the choices he's made in life as past and present come crashing down around him.",
-      poster_path: "https://image.tmdb.org/t/p/w500/cMlueArJXXwZbeLpb4NhC3pxmJj.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/xVNQsS4LoQyZEpJ5mP7aBjXzYEH.jpg",
+      overview: "A film director reflects on the choices he's made as past and present come crashing down around him.",
+      poster_path: "https://image.tmdb.org/t/p/w500/6bsO6LwT2p2gqLQWgNLwF6f2a1L.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/3p1bWk4Q1s2dqwM6bA1j3z7jyrm.jpg",
       release_date: "2019-03-22",
       vote_average: 7.5,
       vote_count: 1432,
@@ -519,8 +533,8 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
       id: 107,
       title: "City of God",
       overview: "In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
-      poster_path: "https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/194dso1hBwQEgIU3fgS7mXHtFAj.jpg",
+      poster_path: "https://image.tmdb.org/t/p/w500/4pk1lZEy3j5y6ZZj9y8p0gG8T1A.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/9QZbF7h7A8x1rZq1C5t2uQ6i1wJ.jpg",
       release_date: "2002-05-18",
       vote_average: 8.6,
       vote_count: 5678,
@@ -533,9 +547,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 108,
       title: "Leviathan",
-      overview: "In a Russian coastal town, Kolya is forced to fight the corrupt mayor when he is told that his house will be demolished. He recruits a lawyer friend to help, but the man's arrival brings further misfortune for Kolya and his family.",
-      poster_path: "https://image.tmdb.org/t/p/w500/jF2VxrxXzGGMsP0q6dEdlBPmj4H.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/kGMBqZFTXcVcQwT0XzCRiEgf0Ja.jpg",
+      overview: "In a Russian coastal town, Kolya is forced to fight the corrupt mayor when he is told that his house will be demolished.",
+      poster_path: "https://image.tmdb.org/t/p/w500/6hQ1v1nQGQzWwXImQxGc1dQc5sA.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/5Qf6o6h1Q6yK1rQ1yQ1Q6o6h1Q6.jpg",
       release_date: "2014-11-13",
       vote_average: 7.6,
       vote_count: 987,
@@ -548,9 +562,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 109,
       title: "Roma",
-      overview: "A story that chronicles a year in the life of a middle-class family in Mexico City in the early 1970s.",
-      poster_path: "https://image.tmdb.org/t/p/w500/dtBUvPANbDYJwZbeLpb4NhC3pxmJj.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/hVP5A1wvkGqusVtXwHzHvXwGqJh.jpg",
+      overview: "A year in the life of a middle-class family's maid in Mexico City in the early 1970s.",
+      poster_path: "https://image.tmdb.org/t/p/w500/6t8ES1d12OzWyCGxBeDYLHoaDrT.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/2iGN0aKHJYD0xQydlfuCUAcgNbO.jpg",
       release_date: "2018-08-30",
       vote_average: 7.7,
       vote_count: 3456,
@@ -563,9 +577,9 @@ const getMockTrendingMovies = (region: string = DEFAULT_REGION): Movie[] => {
     moviesWithRegion.push({
       id: 110,
       title: "The Square",
-      overview: "A prestigious Stockholm museum's chief art curator finds himself in times of both professional and personal Crisis as he attempts to set up a controversial new exhibit.",
-      poster_path: "https://image.tmdb.org/t/p/w500/8KeYYNe8hnKjxjujV9jGNDGlyDJ.jpg",
-      backdrop_path: "https://image.tmdb.org/t/p/original/zX2ynvmNh9x6xYAO81Q6Sh4XjlL.jpg",
+      overview: "A prestigious Stockholm museum's chief art curator finds himself in times of both professional and personal crisis.",
+      poster_path: "https://image.tmdb.org/t/p/w500/5L7Z6bi1WcJ1nQ1Qy1Q6o6h1Q6.jpg",
+      backdrop_path: "https://image.tmdb.org/t/p/original/7Qf6o6h1Q6yK1rQ1yQ1Q6o6h1Q6.jpg",
       release_date: "2017-08-25",
       vote_average: 7.2,
       vote_count: 1234,
@@ -608,10 +622,26 @@ const getMockMovieDetails = (id: number, region: string = DEFAULT_REGION): Movie
       ],
       production_companies: [
         {
-          id: 9996,
+          id: 9993,
+          name: "Legendary Pictures",
+          logo_path: "/c9dVHPOL3cqCr2593Ahk0nEKTEM.png",
+          origin_country: "US"
+        },
+        {
+          id: 923,
           name: "Syncopy",
-          logo_path: "/5UQsZrfbfG2dYJbx8DxfoTr2Bvu.png"
+          logo_path: "/e8A0D6hOaR4J0JkCj9pP8IvFh3V.png",
+          origin_country: "GB"
         }
+      ],
+      production_countries: [
+        { iso_3166_1: "US", name: "United States of America" },
+        { iso_3166_1: "GB", name: "United Kingdom" }
+      ],
+      spoken_languages: [
+        { iso_639_1: "en", name: "English", english_name: "English" },
+        { iso_639_1: "ja", name: "Japanese", english_name: "Japanese" },
+        { iso_639_1: "fr", name: "French", english_name: "French" }
       ],
       videos: {
         results: [
@@ -628,7 +658,7 @@ const getMockMovieDetails = (id: number, region: string = DEFAULT_REGION): Movie
           {
             id: 6193,
             name: "Leonardo DiCaprio",
-            character: "Dom Cobb",
+            character: "Cobb",
             profile_path: "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
           },
           {
@@ -678,10 +708,26 @@ const getMockMovieDetails = (id: number, region: string = DEFAULT_REGION): Movie
     ],
     production_companies: [
       {
-        id: 9996,
+        id: 9993,
+        name: "Legendary Pictures",
+        logo_path: "/c9dVHPOL3cqCr2593Ahk0nEKTEM.png",
+        origin_country: "US"
+      },
+      {
+        id: 923,
         name: "Syncopy",
-        logo_path: "/5UQsZrfbfG2dYJbx8DxfoTr2Bvu.png"
+        logo_path: "/e8A0D6hOaR4J0JkCj9pP8IvFh3V.png",
+        origin_country: "GB"
       }
+    ],
+    production_countries: [
+      { iso_3166_1: "US", name: "United States of America" },
+      { iso_3166_1: "GB", name: "United Kingdom" }
+    ],
+    spoken_languages: [
+      { iso_639_1: "en", name: "English", english_name: "English" },
+      { iso_639_1: "ja", name: "Japanese", english_name: "Japanese" },
+      { iso_639_1: "fr", name: "French", english_name: "French" }
     ],
     videos: {
       results: [
@@ -698,7 +744,7 @@ const getMockMovieDetails = (id: number, region: string = DEFAULT_REGION): Movie
         {
           id: 6193,
           name: "Leonardo DiCaprio",
-          character: "Dom Cobb",
+          character: "Cobb",
           profile_path: "/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
         },
         {

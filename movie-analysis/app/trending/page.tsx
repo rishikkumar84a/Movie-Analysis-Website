@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
-import { getTrendingMovies, DEFAULT_REGION } from '@/lib/api';
+import { getTrendingMovies, DEFAULT_REGION, Movie } from '@/lib/api';
 import MovieCard from '@/components/MovieCard';
 import RegionSelector from '@/components/RegionSelector';
 import { FiFilter, FiGlobe } from 'react-icons/fi';
 
 export default function TrendingPage() {
   const [selectedRegion, setSelectedRegion] = useState(DEFAULT_REGION);
-  const [trendingMovies, setTrendingMovies] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   
   // Fetch trending movies when the component mounts or region changes
